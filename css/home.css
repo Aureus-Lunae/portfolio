@@ -146,6 +146,20 @@ body {
 #menuburger input:checked ~ ul {
   transform: none;
 }
+/************************************
+ * Section overlay
+ *************************************/
+#mooncontainer{
+  top: 0;
+  left: 512px;
+  width: 512px;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
 
 
 /************************************
