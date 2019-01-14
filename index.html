@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="description" content="Portfolio">
+  	<meta name="keywords" content="Portfolio, backend web developer">
+ 	<meta name="author" content="Erwin Korsten">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/home.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<header id='header'>
+		<div><a href='index.html'>Erwin Korsten</a></div>
+		<div class='navigation'>
+			<div class='socialmedia'>
+				<a href='https://www.speedrun.com/user/Aureus_Lunae' class='fa fa-flag-checkered' target='_blank'></a>
+				<a href='https://github.com/Aureus-Lunae' class='fa fa-github' target='_blank'></a>
+				<a href='https://twitter.com/Aureus_Lunae' class='fa fa-twitter' target='_blank'></a>
+				
+			</div>
+			<!-- Menu -->
+			<div id='menuburger'>
+				<input type='checkbox' />
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul id='menu'>
+					<li><a onclick="navlinks('home')" href='#home'>Home</a></li>
+					<li><a href='#'>Projects</a></li>
+					<li><a href='#'>About</a></li>
+					<li><a onclick="navlinks('contact')" href='#contact'>Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<section id='home'>
+		<a name='home'></a>
+
+		<div class='twinkling'></div>
+
+  		<div class='container'>
+  			<div class='content'>
+				<div class='titles'>Erwin<br /> Korsten
+				</div>
+				<span class='golddark'></span>
+				<span class='golddark'></span>
+				<div class='subtitle'>
+					Junior<br />
+					Web Developer
+				</div>
+			</div>
+  		</div>
+
+  		<div class='extra'>
+  			<div class='moonfreya-perspective'>
+  				<figure class='moonfreya'></figure>
+  			</div>
+  		</div>
+	</section>
+
+	<section id='projects'>
+		<a name='projects'></a>
+
+		<div class='twinkling'></div>
+
+  		<div class='container'>
+  			<div class='content'>
+				<div class='titles'>Projects
+				</div>
+				<span class='golddark'></span>
+				<span class='goldlight'></span>
+				<div class='subtitle'>
+					Bots and websites
+				</div>
+			</div>
+  		</div>
+
+  		<div class='extra'>
+  			<div class='moonfreya-perspective'>
+  				<figure class='moonfreya'></figure>
+  			</div>
+  		</div>
+	</section>
+
+	<section id='about'>
+		<a name='about'></a>
+
+		<div class='twinkling'></div>
+
+    	<div class='container'>
+			<div class='content'>
+				<div class='titles'>About me</div>
+				<span class='goldlight'></span>
+				<span class='goldlight'></span>
+				<div class='subtitle'>
+					<div id='aboutme'></div>
+				</div>
+			</div>
+  		</div>
+
+  		<div class='extra'>
+  			<div class='moonfreya-perspective'>
+  				<figure class='moonfreya'></figure>
+  			</div>
+  		</div>
+	</section>
+
+	<section id='contact'>
+		<a name='contact'></a>
+
+		<div class='twinkling'></div>
+
+		<div class='container'>
+  			<div class='content'>
+				<div class='titles'>Get in touch
+				</div>
+				<span class='goldlight'></span>
+				<span class='golddark'></span>
+				<div class='subtitle'>
+					mw.korsten@gmail.com
+				</div>
+			</div>
+  		</div>
+
+  		<div class='extra'>
+  			<div class='moonfreya-perspective'>
+  				<figure class='moonfreya'><div class='moonoverlay'></div></figure>
+  			</div>
+  		</div>
+	</section>
+
+	<div id='leftmenu'>
+		<ul>	
+			<li><a onclick="navlinks('home')" href='#home' class='leftnav home'></a></li>
+			<li><a onclick="navlinks('projects')" href='#projects' class='leftnav projects'></a></li>
+			<li><a onclick="navlinks('about')"  href='#about' class='leftnav about'></a></li>
+			<li><a onclick="navlinks('contact')"  href='#contact' class='leftnav contact'></a></li>
+		</ul>
+	</div>
+
+
+<script src='js/pagechanger.js'></script>
+<script src='js/scroll.js'></script>
+
+</body>
+</html>

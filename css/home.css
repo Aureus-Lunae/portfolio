@@ -1,0 +1,676 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: inherit;
+  font-size: 16px;
+}
+
+body {
+	height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+
+.debug {
+  border: 1px solid #ffdd40;
+}
+
+/**********
+   Header
+ **********/
+
+#header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 0.5em 1.5em;
+  z-index: 3;
+}
+
+#header a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.socialmedia {
+  display: flex;
+  align-items: flex-end;
+}
+
+.socialmedia a {
+  margin: 0 10px;
+}
+
+/**
+ * Hamburger Menu
+ */
+
+#menuburger {
+  margin-left: 50px;
+  position: relative;
+  display: block;
+}
+
+#menuburger input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuburger span {
+  display: block;
+  background: #fff;
+  width: 33px;
+  height: 4px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
+  margin-bottom: 5px;
+
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuburger span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuburger span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuburger input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, 1px);
+  background: #fff;
+}
+
+#menuburger input:checked ~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate: 0deg scale(0.2, 0.2);
+}
+
+#menuburger input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  text-align: right;
+  width: 250px;
+  margin: -2em 0 0 -7em;
+  padding: 2em 0 0 0;
+  background: rgba(0,0,0,0.3);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 0.5em 2em;
+  font-size: 1.5em;
+}
+
+
+#menuburger input:checked ~ ul {
+  transform: none;
+}
+
+
+/************************************
+ * Section parts that gets used in all sections
+ *************************************/
+
+section{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-direction: wrap-reverse;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.container {
+  display: flex;
+  width: 384px;
+  margin-left: 128px;
+  height: 100%;
+  align-items: center;
+  z-index: 1;
+}
+
+.container .content{
+  width: 100%;
+}
+
+.container .content span{
+  display: block;
+  width: 250px;
+  height: 5px;
+  border-radius: 3px;
+  z-index: 1;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.container .content span:nth-last-child(2) {
+  margin-left: 110px;
+}
+
+.golddark {
+  background: #a67c00;
+}
+
+.goldlight {
+  background: #bf9b30;
+}
+
+.extra {
+  min-width: 512px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.titles {
+  display: block;
+  font-size: 5em;
+}
+
+.subtitle {
+  font-size: 3em;
+  margin: 20px;
+}
+
+/**
+ * Page Sections
+ */
+#home{
+  height: 100vh;
+  width: 100%;
+  background: #09090e url(../images/stars.png) repeat top center;
+}
+
+#projects{
+  height: 100vh;
+  width: 100%;
+  background: #181824 url(../images/stars2.png) repeat top center;;
+}
+
+#about{
+  height: 100vh;
+  width: 100%;
+  background: #27273c url(../images/stars.png) repeat top center;;
+}
+
+#contact{
+  height: 100vh;
+  width: 100%;
+  background: #363654 url(../images/stars2.png) repeat top center;;
+}
+
+/**
+ * Twinkling Stars
+ */
+
+.twinkling{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#home .twinkling{
+  top: 0;
+  background: transparent url(../images/twinklinghome.png) repeat top center;
+  animation: twinkling-stars 200s linear infinite;
+}
+
+#projects .twinkling{
+  top: 100%;
+  background: transparent url(../images/twinklingprojects.png) repeat top center;
+  animation: twinkling-stars 200s linear infinite;
+}
+
+#about .twinkling{
+  top: 200%;
+  background: transparent url(../images/twinklingabout.png) repeat top center;
+  animation: twinkling-stars 200s linear infinite;
+}
+
+#contact .twinkling{
+  top: 300%;
+  background: transparent url(../images/twinklingcontact.png) repeat top center;
+  animation: twinkling-stars 200s linear infinite;
+}
+
+@keyframes twinkling-stars{
+  0% {
+    background-position: 0 0; 
+  }
+  100% {
+    background-position: -10000px 5000px;
+  }
+}
+
+/**
+ * Side menu 
+ */
+#leftmenu {
+  display: flex;
+  width: 128px;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+
+#leftmenu ul{
+  list-style-type: none;
+}
+
+.leftnav {
+  margin: 8px 0;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-left: #a67c00 10px solid;
+}
+
+.home {
+  background: #09090e;
+}
+
+.projects {
+  background: #181824;
+}
+
+.about {
+  background: #27273c;
+}
+
+.contact {
+  background: #363654;
+}
+
+.active {
+  background-color: #a67c00;
+  border-left: #bf9b30 10px solid;
+}
+
+
+/**
+ * Moons
+ */
+
+.moonoverlay{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.3;
+  background: #a67c00;
+}
+
+.moonfreya-perspective{
+  width: 450px;
+  height: 450px;
+  display: inline-block;
+  perspective: 1000px;
+  perspective-origin: 50% 50%
+}
+
+#home .extra .moonfreya-perspective{
+  margin-top: -150px;
+}
+
+#projects .extra .moonfreya-perspective{
+  margin-top: 100px;
+}
+
+#about .extra .moonfreya-perspective{
+  margin-top: 300px;
+}
+
+#contact .extra .moonfreya-perspective{
+  margin-top: 600px;
+}
+
+
+.moonfreya{
+  display: inline-block;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url('../images/freya.png') repeat-x;
+  animation: move-moonfreya 90s infinite linear;
+  z-index: 2;
+}
+
+  .moonfreya:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset -30px 10px 50px 15px rgba(0,0,0,0.5);
+    z-index: 3;
+  }
+
+  @keyframes move-moonfreya {
+    0%{
+      background-position: -900px 0;
+    }
+    100%{
+      background-position: 0 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
+/****************************************
+ * Media Queries
+ ***************************************/
+
+
+@media all and (min-width: 768px) and (max-width: 1024px),
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) and  (orientation: landscape){
+
+  html {
+    font-size: 14px;
+  }
+  .container {
+    width: 320px;
+  }
+
+
+  .container .content span{
+    display: block;
+    width: 190px;
+    height: 5px;
+    border-radius: 3px;
+    z-index: 1;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+
+  .container .content span:nth-last-child(2) {
+    margin-left: 110px;
+  }
+
+
+  .extra {
+    min-width: 320px;
+    flex-grow: 1;
+  }
+
+  .moonfreya-perspective{
+    width: 300px;
+    height: 300px;
+  }
+
+  .moonfreya{
+    background: url('../images/freya-mobile.png') repeat-x;
+  }
+
+    .moonfreya:before{
+      box-shadow: inset -20px 8px 40px 10px rgba(0,0,0,0.5);
+    }
+
+    @keyframes move-moonfreya {
+      0%{
+        background-position: -600px 0;
+      }
+      100%{
+        background-position: 0 0;
+      }
+    }
+
+  #home .extra .moonfreya-perspective{
+    margin-top: -200px;
+  }
+
+  #projects .extra .moonfreya-perspective{
+    margin-top: 0px;
+  }
+
+  #about .extra .moonfreya-perspective{
+    margin-top: 200px;
+  }
+
+  #contact .extra .moonfreya-perspective{
+    margin-top: 400px;
+  }
+
+}
+@media all and (min-width: 580px) and (max-width: 768px), 
+only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (orientation: landscape){
+
+  html {
+    font-size: 14px;
+  }
+  .container {
+    min-width: 227px;
+    flex-grow: 0;
+  }
+
+  .container .content span{
+    display: block;
+    width: 190px;
+    height: 5px;
+    border-radius: 3px;
+    z-index: 1;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+
+  .container .content span:nth-last-child(2) {
+    margin-left: 110px;
+  }
+
+
+  .extra {
+    min-width: 227px;
+    flex-grow: 0;
+  }
+
+  .moonfreya-perspective{
+    width: 150px;
+    height: 150px;
+  }
+
+  .moonfreya{
+    background: url('../images/freya-mobile.png') repeat-x;
+  }
+
+    .moonfreya:before{
+      box-shadow: inset -20px 8px 40px 10px rgba(0,0,0,0.5);
+    }
+
+    @keyframes move-moonfreya {
+      0%{
+        background-position: -600px 0;
+      }
+      100%{
+        background-position: 0 0;
+      }
+    }
+  #home .extra .moonfreya-perspective{
+    margin-top: -200px;
+  }
+
+  #projects .extra .moonfreya-perspective{
+    margin-top: 0px;
+  }
+
+  #about .extra .moonfreya-perspective{
+    margin-top: 200px;
+  }
+
+  #contact .extra .moonfreya-perspective{
+    margin-top: 400px;
+  }
+}
+
+
+
+@media only screen and (max-device-width: 1400px) and (orientation: portrait){
+
+  html {
+    font-size: 13px;
+  }
+
+  section{
+    flex-direction: column-reverse;
+  }
+  .container {
+    width: 100%;
+    min-height: 20vh;
+    flex-grow: 1;
+    margin-left: 0;
+    margin-bottom: 64px;
+    justify-content: center;
+  }
+
+  .container .content{
+    width: auto;
+  }
+
+  .container .content span{
+    display: block;
+    width: 60%;
+    height: 5px;
+    border-radius: 3px;
+    z-index: 1;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+
+  .container .content span:nth-last-child(2) {
+    margin-left: 30%;
+  }
+
+
+  .extra {
+    min-height: 250px;
+    height: 300px;
+    width: 100%;
+    flex-grow: 0;
+  }
+
+  .moonfreya-perspective{
+    width: 150px;
+    height: 150px;
+  }
+
+  .moonfreya{
+    background: url('../images/freya-150.png') repeat-x;
+  }
+
+    .moonfreya:before{
+      box-shadow: inset -10px 5px 30px 5px rgba(0,0,0,0.5);
+    }
+
+    @keyframes move-moonfreya {
+      0%{
+        background-position: -300px 0;
+      }
+      100%{
+        background-position: 0 0;
+      }
+    }
+
+  #home .extra .moonfreya-perspective{
+    margin-top: 0px;
+    margin-left: -50px;
+  }
+
+  #projects .extra .moonfreya-perspective{
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  #about .extra .moonfreya-perspective{
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+
+  #contact .extra .moonfreya-perspective{
+    margin-top: 0px;
+    margin-left: 100px;
+  }
+
+
+
+  #leftmenu {
+    top: auto;
+    width: 100%;
+    height: 64px;
+    bottom: 0;
+    justify-content: center;
+  }
+
+  #leftmenu li{
+    display: inline-block;
+  }
+
+  .leftnav {
+    margin: 4px 4px;
+    height: 48px;
+    width: 48px;
+    border-left: #a67c00 5px solid;
+  }
+
+}
