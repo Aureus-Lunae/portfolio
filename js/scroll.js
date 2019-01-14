@@ -24,6 +24,9 @@ var scrollWrap = 750; //Scrolltime for wrapping in ms before you can respond aga
 var canWrap = true; //Scrolltime for wrapping in ms before you can respond again.;
 var useActive = true; //Used to show where you are on the page. Must use .active as a class;
 
+const callExtraFunctions = () => {
+	checkmoon();
+} // Calls an extra function to execute upon Scrolling. This if you define functions in other javascripts.
 
 
 /**
@@ -46,6 +49,7 @@ const scrollToPage = (section, time) => {
 	}
 	setTimeout(resetScrollPossible, time);
 	location.hash = `#`+section;
+	setTimeout(callExtraFunctions, 10);
 }
 
 /**
@@ -215,6 +219,7 @@ const navlinks = (Clicked) => {
 		removeActiveClass();
 		addActiveClass(Clicked);
 	}
+	setTimeout(callExtraFunctions, 10);
 }
 
 if (useActive){

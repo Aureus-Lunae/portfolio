@@ -151,15 +151,14 @@ body {
  *************************************/
 #mooncontainer{
   top: 0;
-  left: 512px;
-  width: 512px;
+  left: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
   position: fixed;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   z-index: 5;
 }
-
 
 
 /************************************
@@ -170,7 +169,6 @@ section{
   height: 100vh;
   display: flex;
   flex-direction: row;
-  flex-direction: wrap-reverse;
   width: 100%;
   justify-content: flex-start;
 }
@@ -373,22 +371,23 @@ section{
   height: 450px;
   display: inline-block;
   perspective: 1000px;
-  perspective-origin: 50% 50%
+  perspective-origin: 50% 50%;
+  transition: all 1s ease-in;
 }
 
-#home .extra .moonfreya-perspective{
-  margin-top: -150px;
+.homemoon{
+  margin-top: -200px;
 }
 
-#projects .extra .moonfreya-perspective{
+.projectsmoon{
   margin-top: 100px;
 }
 
-#about .extra .moonfreya-perspective{
+.aboutmoon{
   margin-top: 300px;
 }
 
-#contact .extra .moonfreya-perspective{
+.contactmoon{
   margin-top: 600px;
 }
 
@@ -492,19 +491,19 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and  (o
       }
     }
 
-  #home .extra .moonfreya-perspective{
+  .homemoon{
     margin-top: -200px;
   }
 
-  #projects .extra .moonfreya-perspective{
+  .projectsmoon{
     margin-top: 0px;
   }
 
-  #about .extra .moonfreya-perspective{
+  .aboutmoon{
     margin-top: 200px;
   }
 
-  #contact .extra .moonfreya-perspective{
+  .contactmoon{
     margin-top: 400px;
   }
 
@@ -561,19 +560,19 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
         background-position: 0 0;
       }
     }
-  #home .extra .moonfreya-perspective{
+  .homemoon{
     margin-top: -200px;
   }
 
-  #projects .extra .moonfreya-perspective{
+  .projectsmoon{
     margin-top: 0px;
   }
 
-  #about .extra .moonfreya-perspective{
+  .aboutmoon{
     margin-top: 200px;
   }
 
-  #contact .extra .moonfreya-perspective{
+  .contactmoon{
     margin-top: 400px;
   }
 }
@@ -589,6 +588,11 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
   section{
     flex-direction: column-reverse;
   }
+
+  #mooncontainer{
+    flex-direction: column-reverse;
+  }
+
   .container {
     width: 100%;
     min-height: 20vh;
@@ -646,26 +650,25 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
       }
     }
 
-  #home .extra .moonfreya-perspective{
+  .homemoon{
+    margin-top: 0px;
+    margin-left: -200px;
+  }
+
+  .projectsmoon{
     margin-top: 0px;
     margin-left: -50px;
   }
 
-  #projects .extra .moonfreya-perspective{
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-
-  #about .extra .moonfreya-perspective{
-    margin-top: 0px;
-    margin-left: 50px;
-  }
-
-  #contact .extra .moonfreya-perspective{
+  .aboutmoon{
     margin-top: 0px;
     margin-left: 100px;
   }
 
+  .contactmoon{
+    margin-top: 0px;
+    margin-left: 250px;
+  }
 
 
   #leftmenu {
