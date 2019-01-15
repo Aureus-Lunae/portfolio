@@ -17,7 +17,7 @@
 }
 
 .planet{
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	display: inline-block;
 	transform-style: preserve-3d;
 	border-radius: 50%;
@@ -53,8 +53,8 @@
  */
 
 .lavaplanet{
-	background: url('../images/lavarock.png') repeat-x;
-	animation: move-planets 120s infinite linear;
+	background: url('../images/lavarock.jpg') repeat-x;
+	animation: move-planets 40s infinite linear;
 }
 
 .rockplanet{
@@ -183,21 +183,21 @@
  */
 
 .planetcloud1{
-	background: url('../images/planetclouds/cloud1.png') repeat-x;
+	background: url('../images/planetclouds/clouds1.png') repeat-x;
 	animation: move-planets 20s infinite linear;
 }
 
-.planetclouds2{
-	background: url('../images/planetclouds/cloud2.png') repeat-x;
+.planetcloud2{
+	background: url('../images/planetclouds/clouds2.png') repeat-x;
 	animation: move-planets 20s infinite linear;
 }
 
 .planetcloud3{
-	background: url('../images/planetclouds/cloud3.png') repeat-x;
+	background: url('../images/planetclouds/clouds3.png') repeat-x;
 	animation: move-planets 20s infinite linear;
 }
 
-.planetclouds4{
-	background: url('../images/planetclouds/cloud4.png') repeat-x;
+.planetcloud4{
+	background: url('../images/planetclouds/clouds4.png') repeat-x;
 	animation: move-planets 20s infinite linear;
 }
