@@ -73,7 +73,7 @@
 
 .earthplanet2{
 	background: #39585c url('../images/earthplanets/earth2.png') repeat-x;
-	animation: move-planets 100s infinite linear;
+	animation: move-planets 90s infinite linear;
 }
 
 .earthplanet3{
@@ -87,7 +87,7 @@
 
 .gasplanet1{
 	background: url('../images/gasplanets/gasplanet1.png') repeat-x;
-	animation: move-planets 110s infinite linear;
+	animation: move-planets 90s infinite linear;
 }
 
 .gasplanet2{
@@ -136,7 +136,7 @@
 
 .waterplanet2{
 	background: url('../images/waterplanets/waterplanet2.png') repeat-x;
-	animation: move-planets 120s infinite linear;
+	animation: move-planets 90s infinite linear;
 }
 
 /**
