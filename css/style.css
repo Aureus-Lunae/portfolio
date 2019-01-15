@@ -1,0 +1,73 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: inherit;
+  font-size: 16px;
+}
+
+body {
+	height: 100vh;
+  	margin: 0;
+  	font-family: 'Roboto', 'Open Sans', sans-serif;
+  	color: #fff;
+}
+
+.debug {
+  border: 1px solid #ffdd40;
+}
+
+/*****************************
+ * Twinkling Stars background
+ ****************************/
+.twinkling{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#projectcontainer .twinkling{
+  background: transparent url(../images/twinklingprojects.png) repeat top center;
+  animation: twinkling-stars 200s linear infinite;
+}
+
+@keyframes twinkling-stars{
+  0% {
+    background-position: 0 0; 
+  }
+  100% {
+    background-position: -10000px 5000px;
+  }
+}
+/**********************
+ * Projectscontainer
+ *********************/
+ 
+ #projectcontainer{
+ 	padding: 2em;
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	justify-content: space-around;
+ 	align-items: space-between;
+   	width: 100%;
+   	min-height: 100%;
+  	background: #181824 url(../images/stars2.png) repeat top center;
+ }
+
+ .project{
+ 	margin: 1em;
+ 	height: 512px;
+ 	width: 512px;
+ 	display: flex;
+ 	align-items: center;
+ }
+

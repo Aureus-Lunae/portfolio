@@ -38,14 +38,22 @@ const checkmoon = () => {
 		moonlocation[i].classList.remove(removeClass2);
 		moonlocation[i].classList.remove(removeClass3);
     	moonlocation[i].classList.add(newclass);
-    	if (newclass===`contactmoon`){
-    		moon[i].innerHTML=`<div class='moonoverlay'></div>`;
-  		} else {
-  			moon[i].innerHTML=``;
-  		}
+  		changeMoonInnerHTML(moon[i], newclass);
     }
 }
 
-checkmoon();
+const changeMoonInnerHTML = (moons, newclass) => {
+	switch (newclass) {
+		case `contactmoon`:
+			moons.innerHTML=`<div class='moonoverlay'></div>`;
+			break;
+		case `projectsmoon`:
+			moons.innerHTML=`<a href='projects.html' class='moonlink moonlinkprojects'>Show more</a>`;
+			break;
+		default:
+			moons.innerHTML=``;
+	}
 
-// var moonInterval = setInterval(checkmoon, 3000);
+}
+
+checkmoon();

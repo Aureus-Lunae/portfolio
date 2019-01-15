@@ -1,0 +1,33 @@
+.space-perspective{
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	perspective: 700px;
+	perspective-origin: 50% 50%;
+}
+
+.lunaebot{
+	display: inline-block;
+	transform-style: preserve-3d;
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: url('../images/lunaebot.png') repeat-x;
+	animation: move-planets 90s infite linear;
+	z-index: 2;
+}
+
+	.lunaebot:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		box-shadow: inset -25px 10px 50px 15px rgba(0,0,0,0.5);
+		z-index: 3;
+	}
+
+@keyframes 

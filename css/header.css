@@ -1,0 +1,124 @@
+/**********
+   Header
+ **********/
+
+#header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 0.5em 1.5em;
+  z-index: 2;
+}
+
+#header a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.socialmedia {
+  display: flex;
+  align-items: flex-end;
+  z-index: 999;
+}
+
+.socialmedia a {
+  margin: 0 10px;
+}
+
+/**
+ * Hamburger Menu
+ */
+
+#menuburger {
+  margin-left: 50px;
+  position: relative;
+  display: block;
+}
+
+#menuburger input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuburger span {
+  display: block;
+  background: #fff;
+  width: 33px;
+  height: 4px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
+  margin-bottom: 5px;
+
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuburger span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuburger span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuburger input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, 1px);
+  background: #fff;
+}
+
+#menuburger input:checked ~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate: 0deg scale(0.2, 0.2);
+}
+
+#menuburger input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  text-align: right;
+  width: 250px;
+  margin: -2em 0 0 -7em;
+  padding: 2em 0 0 0;
+  background: rgba(0,0,0,0.3);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 0.5em 2em;
+  font-size: 1.5em;
+}
+
+
+#menuburger input:checked ~ ul {
+  transform: none;
+}
