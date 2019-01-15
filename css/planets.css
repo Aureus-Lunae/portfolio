@@ -6,19 +6,28 @@
 	perspective-origin: 50% 50%;
 }
 
-.lunaebot{
+@keyframes move-planets {
+	0%{
+		background-position: -600px 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.planet{
+	margin-top: 20px;
 	display: inline-block;
 	transform-style: preserve-3d;
 	border-radius: 50%;
 	height: 100%;
 	width: 100%;
 	position: relative;
-	background: url('../images/lunaebot.png') repeat-x;
-	animation: move-planets 90s infite linear;
 	z-index: 2;
 }
 
-	.lunaebot:before{
+	.planet:before{
 		content: '';
 		position: absolute;
 		top: 0;
@@ -30,4 +39,46 @@
 		z-index: 3;
 	}
 
-@keyframes 
+/**
+ * Lunaebot special planet
+ */
+
+.lunaebot{
+	background: url('../images/lunaebot.png') repeat-x;
+	animation: move-planets 30s infinite linear;
+}
+
+
+/**
+ * Earthlike planets
+ */
+
+.endor{
+	background: url('../images/endor.png') repeat-x;
+	animation: move-planets 60s infinite linear;
+}
+
+
+.earthplanet1{
+	background: url('../images/earthplanet1.png') repeat-x;
+	animation: move-planets 80s infinite linear;
+}
+
+.earthplanet2{
+	background: #39585c url('../images/earth2.png') repeat-x;
+	animation: move-planets 100s infinite linear;
+}
+
+.earthplanet3{
+	background: #39585c url('../images/earthplanet3.png') repeat-x;
+	animation: move-planets 45s infinite linear;
+}
+
+/**
+ * water planets
+ */
+
+.earthplanet1{
+	background: url('../images/waterplanet1.png') repeat-x;
+	animation: move-planets 75s infinite linear;
+}

@@ -68,6 +68,18 @@ body {
  	height: 512px;
  	width: 512px;
  	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
  	align-items: center;
+ 	z-index: 1;
  }
 
+ .projecttext{
+ 	font-size: 3em;
+ 	color: #fff;
+ }
+
+ .projectsubtext{
+ 	font-size: 1.5em;
+ 	color: #fff;
+ }

@@ -9,14 +9,14 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  color: #fff;
+  color: #a67c00;
   font-size: 1.5em;
   padding: 0.5em 1.5em;
   z-index: 2;
 }
 
 #header a {
-  color: #fff;
+  color: #a67c00;
   text-decoration: none;
   display: block;
   cursor: pointer;
@@ -61,7 +61,7 @@
 
 #menuburger span {
   display: block;
-  background: #fff;
+  background: #a67c00;
   width: 33px;
   height: 4px;
   position: relative;
@@ -86,7 +86,7 @@
 #menuburger input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, 1px);
-  background: #fff;
+  background: #a67c00;
 }
 
 #menuburger input:checked ~span:nth-last-child(3) {
