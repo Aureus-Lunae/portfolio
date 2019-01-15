@@ -376,19 +376,23 @@ section{
 }
 
 .homemoon{
-  margin-top: -200px;
+  margin-top: -100px;
+  margin-left: -75px;
 }
 
 .projectsmoon{
-  margin-top: 100px;
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
 .aboutmoon{
-  margin-top: 300px;
+  margin-top: 250px;
+  margin-left: 40px;
 }
 
 .contactmoon{
   margin-top: 600px;
+  margin-left: 50px;
 }
 
 
