@@ -48,37 +48,156 @@
 	animation: move-planets 30s infinite linear;
 }
 
+/**
+ * Lava/rock planet
+ */
+
+.lavaplanet{
+	background: url('../images/lavarock.png') repeat-x;
+	animation: move-planets 120s infinite linear;
+}
+
+.rockplanet{
+	background: url('../images/rock01.png') repeat-x;
+	animation: move-planets 60s infinite linear;
+}
 
 /**
  * Earthlike planets
  */
 
-.endor{
-	background: url('../images/endor.png') repeat-x;
-	animation: move-planets 60s infinite linear;
-}
-
-
 .earthplanet1{
-	background: url('../images/earthplanet1.png') repeat-x;
+	background: url('../images/earthplanets/earthplanet1.png') repeat-x;
 	animation: move-planets 80s infinite linear;
 }
 
 .earthplanet2{
-	background: #39585c url('../images/earth2.png') repeat-x;
+	background: #39585c url('../images/earthplanets/earth2.png') repeat-x;
 	animation: move-planets 100s infinite linear;
 }
 
 .earthplanet3{
-	background: #39585c url('../images/earthplanet3.png') repeat-x;
+	background: #39585c url('../images/earthplanets/earthplanet3.png') repeat-x;
 	animation: move-planets 45s infinite linear;
 }
 
 /**
- * water planets
+ * Gas planets
  */
 
-.earthplanet1{
-	background: url('../images/waterplanet1.png') repeat-x;
+.gasplanet1{
+	background: url('../images/gasplanets/gasplanet1.png') repeat-x;
+	animation: move-planets 110s infinite linear;
+}
+
+.gasplanet2{
+	background: #39585c url('../images/gasplanets/gasplanet2.png') repeat-x;
+	animation: move-planets 85s infinite linear;
+}
+
+.gasplanet3{
+	background: #39585c url('../images/gasplanets/gasplanet3.png') repeat-x;
 	animation: move-planets 75s infinite linear;
+}
+
+/**
+ * Ice planets
+ */
+
+.iceplanet1{
+	background: url('../images/iceplanets/iceplanet1.png') repeat-x;
+	animation: move-planets 110s infinite linear;
+}
+
+.iceplanet2{
+	background: url('../images/iceplanets/iceplanet2.png') repeat-x;
+	animation: move-planets 100s infinite linear;
+}
+
+.iceplanet3{
+	background: url('../images/iceplanets/iceplanet3.png') repeat-x;
+	animation: move-planets 120s infinite linear;
+}
+
+.iceplanet4{
+	background: url('../images/iceplanets/iceplanet4.png') repeat-x;
+	animation: move-planets 90s infinite linear;
+}
+
+
+/**
+ * Water planets
+ */
+
+.waterplanet1{
+	background: url('../images/waterplanets/waterplanet1.png') repeat-x;
+	animation: move-planets 75s infinite linear;
+}
+
+.waterplanet2{
+	background: url('../images/waterplanets/waterplanet2.png') repeat-x;
+	animation: move-planets 120s infinite linear;
+}
+
+/**
+ * Terrestrials
+ */
+
+.charis3{
+	background: url('../images/terrestrial/charis3.png') repeat-x;
+	animation: move-planets 80s infinite linear;
+}
+
+.classl{
+	background: url('../images/terrestrial/classl.png') repeat-x;
+	animation: move-planets 60s infinite linear;
+}
+
+.dagon{
+	background: url('../images/terrestrial/dagon.png') repeat-x;
+	animation: move-planets 90s infinite linear;
+}
+
+.endor{
+	background: url('../images/terrestrial/endor.png') repeat-x;
+	animation: move-planets 60s infinite linear;
+}
+
+.hydra{
+	background: url('../images/terrestrial/hydra.png') repeat-x;
+	animation: move-planets 75s infinite linear;
+}
+
+.martian{
+	background: url('../images/terrestrial/martian.png') repeat-x;
+	animation: move-planets 65s infinite linear;
+}
+
+.valdrada{
+	background: url('../images/terrestrial/valdrada.png') repeat-x;
+	animation: move-planets 55s infinite linear;
+}
+
+/**
+ * Planet Clouds
+ */
+
+.planetcloud1{
+	background: url('../images/planetclouds/cloud1.png') repeat-x;
+	animation: move-planets 20s infinite linear;
+}
+
+.planetclouds2{
+	background: url('../images/planetclouds/cloud2.png') repeat-x;
+	animation: move-planets 20s infinite linear;
+}
+
+.planetcloud3{
+	background: url('../images/planetclouds/cloud3.png') repeat-x;
+	animation: move-planets 20s infinite linear;
+}
+
+.planetclouds4{
+	background: url('../images/planetclouds/cloud4.png') repeat-x;
+	animation: move-planets 20s infinite linear;
 }
