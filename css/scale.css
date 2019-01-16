@@ -4,60 +4,113 @@
 
 .scale01 {
 	transform: scale3d(0.1, 0.1, 0.1);
-	margin-top: -20px;
 }
 
 .scale02 {
 	transform: scale3d(0.2, 0.2, 0.2);
-	margin-top: -20px;
 }
 
 .scale03 {
 	transform: scale3d(0.3, 0.3, 0.3);
-	margin-top: -20px;
 }
 
 .scale04 {
 	transform: scale3d(0.4, 0.4, 0.4);
-	margin-top: -20px;
 }
 
 .scale05 {
 	transform: scale3d(0.5, 0.5, 0.5);
-	margin-top: -20px;
 }
 
 .scale06 {
 	transform: scale3d(0.6, 0.6, 0.6);
-	margin-top: -15px;
 }
 
 .scale07 {
 	transform: scale3d(0.7, 0.7, 0.7);
-	margin-top: -20px;
 }
 
 .scale08 {
 	transform: scale3d(0.8, 0.8, 0.8);
-	margin-top: -5px;
 }
 
 .scale09 {
-	margin-top: 5px;
 	transform: scale3d(0.9, 0.9, 0.9);
 }
 
 .scale10 {
-	margin-top: 10px;
 	transform: scale3d(1, 1, 1);
 }
 
 .scale11 {
-	margin-top: 20px;
 	transform: scale3d(1.1, 1.1, 1.1);
 }
 
 .scale12 {
+	transform: scale3d(1.2, 1.2, 1.2);
+}
+
+/**
+ * 3d scaling margintop fix
+ */
+
+.scale01m {
+	transform: scale3d(0.1, 0.1, 0.1);
+	margin-top: -100px;
+}
+
+.scale02m {
+	transform: scale3d(0.2, 0.2, 0.2);
+	margin-top: -100px;
+}
+
+.scale03m {
+	transform: scale3d(0.3, 0.3, 0.3);
+	margin-top: -100px;
+}
+
+.scale04m {
+	transform: scale3d(0.4, 0.4, 0.4);
+	margin-top: -75px;
+}
+
+.scale05m {
+	transform: scale3d(0.5, 0.5, 0.5);
+	margin-top: -75px;
+}
+
+.scale06m {
+	transform: scale3d(0.6, 0.6, 0.6);
+	margin-top: -50px;
+}
+
+.scale07m {
+	transform: scale3d(0.7, 0.7, 0.7);
+	margin-top: -50px;
+}
+
+.scale08m {
+	transform: scale3d(0.8, 0.8, 0.8);
+	margin-top: -25px;
+}
+
+.scale09m {
+	margin-top: 5px;
+	transform: scale3d(0.9, 0.9, 0.9);
+}
+
+.scale10m {
+	margin-top: 10px;
+	transform: scale3d(1, 1, 1);
+}
+
+.scale11m {
+	margin-top: 20px;
+	transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.scale12m {
 	margin-top: 30px;
 	transform: scale3d(1.2, 1.2, 1.2);
 }
+

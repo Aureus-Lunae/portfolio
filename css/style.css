@@ -103,12 +103,14 @@ body {
  .projecttext{
  	font-size: 3em;
  	color: #fff;
+ 	text-align: center;
  }
 
  .projectsubtext{
  	font-size: 1.5em;
  	color: #fff;
  	margin-bottom: 20px;
+ 	text-align: center;
  }
 
 

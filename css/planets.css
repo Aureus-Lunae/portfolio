@@ -106,22 +106,22 @@
 
 .iceplanet1{
 	background: url('../images/iceplanets/iceplanet1.png') repeat-x;
-	animation: move-planets 110s infinite linear;
+	animation: move-planets 70s infinite linear;
 }
 
 .iceplanet2{
 	background: url('../images/iceplanets/iceplanet2.png') repeat-x;
-	animation: move-planets 100s infinite linear;
+	animation: move-planets 80s infinite linear;
 }
 
 .iceplanet3{
 	background: url('../images/iceplanets/iceplanet3.png') repeat-x;
-	animation: move-planets 120s infinite linear;
+	animation: move-planets 60s infinite linear;
 }
 
 .iceplanet4{
 	background: url('../images/iceplanets/iceplanet4.png') repeat-x;
-	animation: move-planets 90s infinite linear;
+	animation: move-planets 50s infinite linear;
 }
 
 
@@ -136,7 +136,7 @@
 
 .waterplanet2{
 	background: url('../images/waterplanets/waterplanet2.png') repeat-x;
-	animation: move-planets 90s infinite linear;
+	animation: move-planets 50s infinite linear;
 }
 
 /**
@@ -199,5 +199,10 @@
 
 .planetcloud4{
 	background: url('../images/planetclouds/clouds4.png') repeat-x;
+	animation: move-planets 20s infinite linear;
+}
+
+.planetcloud5{
+	background: url('../images/planetclouds/clouds5.png') repeat-x;
 	animation: move-planets 20s infinite linear;
 }
