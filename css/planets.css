@@ -2,8 +2,8 @@
 	width: 300px;
 	height: 300px;
 	display: inline-block;
-	perspective: 700px;
-	perspective-origin: 50% 50%;
+/*	perspective: 700px;
+	perspective-origin: 50% 50%;*/
 }
 
 @keyframes move-planets {
@@ -38,6 +38,63 @@
 		box-shadow: inset -25px 10px 50px 15px rgba(0,0,0,0.5);
 		z-index: 3;
 	}
+
+/**
+ * 3d scaling
+ */
+
+.scale01 {
+	transform: scale3d(0.1, 0.1, 0.1);
+}
+
+.scale02 {
+	transform: scale3d(0.2, 0.2, 0.2);
+}
+
+.scale03 {
+	transform: scale3d(0.3, 0.3, 0.3);
+}
+
+.scale04 {
+	transform: scale3d(0.4, 0.4, 0.4);
+}
+
+.scale05 {
+	transform: scale3d(0.5, 0.5, 0.5);
+}
+
+.scale06 {
+	transform: scale3d(0.6, 0.6, 0.6);
+}
+
+.scale07 {
+	transform: scale3d(0.7, 0.7, 0.7);
+}
+
+.scale08 {
+	transform: scale3d(0.8, 0.8, 0.8);
+}
+
+.scale09 {
+	margin-top: 5px;
+	transform: scale3d(0.9, 0.9, 0.9);
+}
+
+.scale10 {
+	margin-top: 10px;
+	transform: scale3d(1, 1, 1);
+}
+
+.scale11 {
+	margin-top: 20px;
+	transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.scale12 {
+	margin-top: 30px;
+	transform: scale3d(1.2, 1.2, 1.2);
+}
+
 
 /**
  * Lunaebot special planet

@@ -54,19 +54,45 @@ body {
  
  #projectcontainer{
  	padding: 2em;
- 	display: flex;
- 	flex-wrap: wrap;
- 	justify-content: space-around;
- 	align-items: space-between;
+ 	position: fixed;
    	width: 100%;
-   	min-height: 100%;
+   	min-height: 100vh;
   	background: #181824 url(../images/stars2.png) repeat top center;
+  	z-index: -1;
  }
+
+
+.grid-layout {
+	padding: 4em 1em 2em 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: minmax(320px, auto);
+    grid-auto-flow: dense;
+    perspective: 700px;
+	perspective-origin: 50% 50%;
+}
+
+.rowspan-2 {
+    grid-row-end: span 2;
+}
+
+.rowspan-3 {
+    grid-row-end: span 3;
+}
+
+.colspan-2 {
+	grid-column-end: span 2;
+}
+
+.colspan-3 {
+    grid-column-end: span 3;
+}
+
+
 
  .project{
  	margin: 1em;
- 	height: 512px;
- 	width: 512px;
  	display: flex;
  	flex-direction: column;
  	justify-content: center;
@@ -84,3 +110,37 @@ body {
  	color: #fff;
  	margin-bottom: 20px;
  }
+
+
+/** 
+ * Media Queries
+ */
+
+@media all and (min-width: 700px) and (max-width: 1024px),
+only screen and (min-device-width: 700px) and (max-device-width: 1024px){
+	html{
+		font-size: 14px;
+	}
+
+
+	.colspan-3 {
+	    grid-column-end: span 2;
+	}
+}
+
+@media all and (min-width: 350px) and (max-width: 700px), 
+only screen and (min-device-width: 350px) and (max-device-width: 700px){
+
+  html {
+    font-size: 13px;
+  }
+
+	.colspan-2 {
+		grid-column-end: span 1;
+	}
+
+	.colspan-3 {
+	    grid-column-end: span 1;
+	}
+
+}
