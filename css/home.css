@@ -180,55 +180,6 @@ section{
 }
 
 /**
- * Side menu 
- */
-#leftmenu {
-  display: flex;
-  width: 128px;
-  height: 100%;
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  align-items: center;
-}
-
-#leftmenu ul{
-  list-style-type: none;
-}
-
-.leftnav {
-  margin: 8px 0;
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  display: inline-block;
-  border-left: #a67c00 10px solid;
-}
-
-.home {
-  background: #09090e;
-}
-
-.projects {
-  background: #181824;
-}
-
-.about {
-  background: #27273c;
-}
-
-.contact {
-  background: #363654;
-}
-
-.active {
-  background-color: #a67c00;
-  border-left: #bf9b30 10px solid;
-}
-
-
-/**
  * Moons
  */
 
@@ -586,26 +537,6 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
   .contactmoon{
     margin-top: 20px;
     margin-left: 250px;
-  }
-
-
-  #leftmenu {
-    top: auto;
-    width: 100%;
-    height: 64px;
-    bottom: 0;
-    justify-content: center;
-  }
-
-  #leftmenu li{
-    display: inline-block;
-  }
-
-  .leftnav {
-    margin: 4px 4px;
-    height: 48px;
-    width: 48px;
-    border-left: #a67c00 5px solid;
   }
 
   .moonlink{

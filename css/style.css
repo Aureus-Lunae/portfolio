@@ -56,13 +56,14 @@ body {
  	padding: 2em;
  	position: fixed;
    	width: 100%;
-   	min-height: 100vh;
+   	min-height: 100%;
   	background: #181824 url(../images/stars2.png) repeat top center;
   	z-index: -1;
  }
 
 
 .grid-layout {
+	margin-left: 128px;
 	padding: 4em 1em 2em 1em;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -118,8 +119,8 @@ body {
  * Media Queries
  */
 
-@media all and (min-width: 700px) and (max-width: 1024px),
-only screen and (min-device-width: 700px) and (max-device-width: 1024px){
+@media all and (min-width: 768px) and (max-width: 1024px),
+only screen and (min-device-width: 768px) and (max-device-width: 1024px){
 	html{
 		font-size: 14px;
 	}
@@ -130,8 +131,8 @@ only screen and (min-device-width: 700px) and (max-device-width: 1024px){
 	}
 }
 
-@media all and (min-width: 350px) and (max-width: 700px), 
-only screen and (min-device-width: 350px) and (max-device-width: 700px){
+@media all and (min-width: 350px) and (max-width: 768px), 
+only screen and (min-device-width: 350px) and (max-device-width: 768px){
 
   html {
     font-size: 13px;
@@ -145,4 +146,15 @@ only screen and (min-device-width: 350px) and (max-device-width: 700px){
 	    grid-column-end: span 1;
 	}
 
+}
+
+@media only screen and (max-device-width: 1400px) and (orientation: portrait){
+	html {
+    	font-size: 13px;
+  	}
+
+	.grid-layout {
+		margin-left: 0;
+		padding-top: 64px
+	}
 }
