@@ -115,6 +115,7 @@ body {
 	z-index: 1;
 }
 
+.about-title,
 .project-text {
 	font-size: 3em;
 	color: #a67c00;
@@ -128,33 +129,25 @@ body {
 	text-align: center;
 }
 
-.about {
-	margin: 1em;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.about-title {
-	font-size: 3em;
-	color: #a67c00;
-	text-align: center;
-}
-
 .about-subtitle {
 	font-size: 1.5em;
 	color: #fff;
 	text-align: center;
 }
 
-.about p {
+.project p {
 	text-align: justify;
 }
 
 .extra {
 	display: none;
+	position: absolute;
+	width: 320px;
+	color: #a67c00;
+	text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+	transform: translate(250px, 50px);
+	text-align: center;
+	z-index: 5;
 }
 
 .extra-title {
@@ -164,7 +157,6 @@ body {
 }
 
 .extra p {
-	padding: 0.5em;
 	font-size: 1em;
 }
 
@@ -172,17 +164,10 @@ body {
 .hide {
 	width: 100%;
 	height: 100%;
-	z-index: 4;
 }
 
 .hide:hover .extra {
 	display: inline-block;
-	position: absolute;
-	color: #a67c00;
-	text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-	transform: translate(-50px, 50px);
-	text-align: center;
-	border-radius: 20px;
 }
 
 /** 
@@ -227,6 +212,13 @@ only screen and (min-device-width: 350px) and (max-device-width: 768px) {
 		grid-row-end: span 1;
 	}
 
+	.extra {
+		display: inline-block;
+		transform: translate(0, 0);
+		text-align: center;
+		z-index: 5;
+	}
+
 }
 
 @media only screen and (max-device-width: 1400px) and (orientation: portrait) {
@@ -237,5 +229,12 @@ only screen and (min-device-width: 350px) and (max-device-width: 768px) {
 	.grid-layout {
 		margin-left: 0;
 		padding-top: 64px
+	}
+
+	.extra {
+		display: inline-block;
+		transform: translate(0, 0);
+		text-align: center;
+		z-index: 5;
 	}
 }
