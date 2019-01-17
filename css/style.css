@@ -1,100 +1,101 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  box-sizing: inherit;
-  font-size: 16px;
+	scroll-behavior: smooth;
+	box-sizing: inherit;
+	font-size: 16px;
 }
 
 body {
 	min-height: 100vh;
-  	margin: 0;
-  	font-family: 'Roboto', 'Open Sans', sans-serif;
-  	color: #fff;
+	margin: 0;
+	font-family: 'Roboto', 'Open Sans', sans-serif;
+	color: #fff;
 }
 
 .debug {
-  border: 1px solid #ffdd40;
+	border: 1px solid #ffdd40;
 }
 
 /*****************************
  * Twinkling Stars background
  ****************************/
-.twinkling{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  min-height: 100%;
-  display: block;
+
+.twinkling {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	min-height: 100%;
+	display: block;
 }
 
-#project-container .twinkling{
-  background: transparent url(../images/twinklingprojects.png) repeat top center;
-  animation: twinkling-stars 200s linear infinite;
+#project-container .twinkling {
+	background: transparent url(../images/twinklingprojects.png) repeat top center;
+	animation: twinkling-stars 200s linear infinite;
 }
 
-#aboutme-container .twinkling{
-  background: transparent url(../images/twinklingabout.png) repeat top center;
-  animation: twinkling-stars 200s linear infinite;
+#aboutme-container .twinkling {
+	background: transparent url(../images/twinklingabout.png) repeat top center;
+	animation: twinkling-stars 200s linear infinite;
 }
 
-@keyframes twinkling-stars{
-  0% {
-    background-position: 0 0; 
-  }
-  100% {
-    background-position: -10000px 5000px;
-  }
+@keyframes twinkling-stars {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -10000px 5000px;
+	}
 }
 
 /**********************
  * Projectscontainer
  *********************/
- 
- #project-container{
- 	padding: 2em;
- 	position: fixed;
-   	width: 100%;
-   	min-height: 100%;
-  	background: #181824 url(../images/stars2.png) repeat top center;
-  	z-index: -1;
- }
 
- #aboutme-container{
- 	padding: 2em;
- 	position: fixed;
-   	width: 100%;
-   	min-height: 100%;
-  	background: #27273c url(../images/stars.png) repeat top center;
-  	z-index: -1;
- }
+#project-container {
+	padding: 2em;
+	position: fixed;
+	width: 100%;
+	min-height: 100%;
+	background: #181824 url(../images/stars2.png) repeat top center;
+	z-index: -1;
+}
 
+#aboutme-container {
+	padding: 2em;
+	position: fixed;
+	width: 100%;
+	min-height: 100%;
+	background: #27273c url(../images/stars.png) repeat top center;
+	z-index: -1;
+}
 
 .grid-layout {
 	margin-left: 128px;
 	padding: 4em 1em 2em 1em;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: 10px;
-    grid-auto-rows: minmax(320px, auto);
-    grid-auto-flow: dense;
-    perspective: 700px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	grid-gap: 10px;
+	grid-auto-rows: minmax(320px, auto);
+	grid-auto-flow: dense;
+	perspective: 700px;
 	perspective-origin: 50% 50%;
 }
 
 .rowspan-2 {
-    grid-row-end: span 2;
+	grid-row-end: span 2;
 }
 
 .rowspan-3 {
-    grid-row-end: span 3;
+	grid-row-end: span 3;
 }
 
 .colspan-2 {
@@ -102,47 +103,47 @@ body {
 }
 
 .colspan-3 {
-    grid-column-end: span 3;
+	grid-column-end: span 3;
 }
 
-.project{
- 	margin: 1em;
- 	display: flex;
- 	flex-direction: column;
- 	justify-content: center;
- 	align-items: center;
- 	z-index: 1;
+.project {
+	margin: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
 }
 
-.project-text{
- 	font-size: 3em;
- 	color: #a67c00;
- 	text-align: center;
-}
-
-.project-subtext{
- 	font-size: 1.5em;
- 	color: #fff;
- 	margin-bottom: 20px;
- 	text-align: center;
-}
-
-.about{
- 	margin: 1em;
- 	display: flex;
- 	flex-direction: column;
- 	justify-content: center;
- 	align-items: center;
- 	z-index: 1;
-}
-
-.about-title{
+.project-text {
 	font-size: 3em;
 	color: #a67c00;
 	text-align: center;
 }
 
-.about-subtitle{
+.project-subtext {
+	font-size: 1.5em;
+	color: #fff;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.about {
+	margin: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.about-title {
+	font-size: 3em;
+	color: #a67c00;
+	text-align: center;
+}
+
+.about-subtitle {
 	font-size: 1.5em;
 	color: #fff;
 	text-align: center;
@@ -157,22 +158,25 @@ body {
  */
 
 @media all and (min-width: 768px) and (max-width: 1024px),
-only screen and (min-device-width: 768px) and (max-device-width: 1024px){
-	html{
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	html {
 		font-size: 14px;
 	}
 
+	.rowspan-3 {
+		grid-row-end: span 2;
+	}
 
 	.colspan-3 {
-	    grid-column-end: span 2;
+		grid-column-end: span 2;
 	}
 }
 
-@media all and (min-width: 350px) and (max-width: 768px), 
-only screen and (min-device-width: 350px) and (max-device-width: 768px){
+@media all and (min-width: 350px) and (max-width: 768px),
+only screen and (min-device-width: 350px) and (max-device-width: 768px) {
 
 	html {
-	    font-size: 13px;
+		font-size: 13px;
 	}
 
 	.colspan-2 {
@@ -180,15 +184,23 @@ only screen and (min-device-width: 350px) and (max-device-width: 768px){
 	}
 
 	.colspan-3 {
-	    grid-column-end: span 1;
+		grid-column-end: span 1;
+	}
+
+	.rowspan-2 {
+		grid-row-end: span 1;
+	}
+
+	.rowspan-3 {
+		grid-row-end: span 1;
 	}
 
 }
 
-@media only screen and (max-device-width: 1400px) and (orientation: portrait){
+@media only screen and (max-device-width: 1400px) and (orientation: portrait) {
 	html {
-    	font-size: 13px;
-  	}
+		font-size: 13px;
+	}
 
 	.grid-layout {
 		margin-left: 0;
