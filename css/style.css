@@ -17,8 +17,37 @@ body {
 	color: #fff;
 }
 
-.debug {
-	border: 1px solid #ffdd40;
+.load-page-projects {
+	background: #181824;
+	z-index: 9999;
+	pointer-events: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	animation: page-fade-in 3s ease-in-out;
+	opacity: 0;
+}
+
+.load-page-about {
+	background: #27273c;
+	z-index: 9999;
+	pointer-events: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	animation: page-fade-in 3s ease-in-out;
+	opacity: 0;
+}
+
+
+@keyframes page-fade-in {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }
 
 /*****************************

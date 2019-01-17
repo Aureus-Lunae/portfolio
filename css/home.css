@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	height: 100vh;
+  height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: 'Roboto', 'Open Sans', sans-serif;
@@ -22,11 +22,33 @@ body {
   border: 1px solid #ffdd40;
 }
 
+.load-page {
+  background: #09090e;
+  z-index: 9999;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  animation: page-fade-in 3s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes page-fade-in {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
 /************************************
  * Section overlay
  *************************************/
 
-#moon-container{
+#moon-container {
   top: 0;
   left: 0;
   height: 100%;
@@ -41,7 +63,7 @@ body {
  * Section parts that gets used in all sections
  *************************************/
 
-section{
+section {
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -58,11 +80,11 @@ section{
   z-index: 1;
 }
 
-.container .content{
+.container .content {
   width: 100%;
 }
 
-.container .content span{
+.container .content span {
   display: block;
   width: 250px;
   height: 5px;
@@ -107,25 +129,26 @@ section{
  * Page Sections
  */
 
-#home{
+#home {
   height: 100vh;
   width: 100%;
   background: #09090e url(../images/stars.png) repeat top center;
 }
 
-#projects{
+#projects {
   height: 100vh;
   width: 100%;
   background: #181824 url(../images/stars2.png) repeat top center;
 }
 
-#about{
+#about {
   height: 100vh;
   width: 100%;
-  background: #27273c url(../images/stars.png) repeat top center;;
+  background: #27273c url(../images/stars.png) repeat top center;
+  ;
 }
 
-#contact{
+#contact {
   height: 100vh;
   width: 100%;
   background: #363654 url(../images/stars2.png) repeat top center;
@@ -135,7 +158,7 @@ section{
  * Twinkling Stars
  */
 
-.twinkling{
+.twinkling {
   position: absolute;
   top: 0;
   left: 0;
@@ -146,34 +169,35 @@ section{
   display: block;
 }
 
-#home .twinkling{
+#home .twinkling {
   top: 0;
   background: transparent url(../images/twinklinghome.png) repeat top center;
   animation: twinkling-stars 200s linear infinite;
 }
 
-#projects .twinkling{
+#projects .twinkling {
   top: 100%;
   background: transparent url(../images/twinklingprojects.png) repeat top center;
   animation: twinkling-stars 200s linear infinite;
 }
 
-#about .twinkling{
+#about .twinkling {
   top: 200%;
   background: transparent url(../images/twinklingabout.png) repeat top center;
   animation: twinkling-stars 200s linear infinite;
 }
 
-#contact .twinkling{
+#contact .twinkling {
   top: 300%;
   background: transparent url(../images/twinklingcontact.png) repeat top center;
   animation: twinkling-stars 200s linear infinite;
 }
 
-@keyframes twinkling-stars{
+@keyframes twinkling-stars {
   0% {
-    background-position: 0 0; 
+    background-position: 0 0;
   }
+
   100% {
     background-position: -10000px 5000px;
   }
@@ -183,7 +207,7 @@ section{
  * Moons
  */
 
-.moon-overlay{
+.moon-overlay {
   position: absolute;
   content: "";
   top: 0;
@@ -196,7 +220,7 @@ section{
   z-index: 5;
 }
 
-.moon-link{
+.moon-link {
   position: absolute;
   content: "";
   top: 0;
@@ -214,15 +238,15 @@ section{
   font-weight: 700;
 }
 
-.moon-link-projects{
+.moon-link-projects {
   color: #181824;
 }
 
-.moon-link-about{
+.moon-link-about {
   color: #27273c;
 }
 
-.moon-freya-perspective{
+.moon-freya-perspective {
   width: 450px;
   height: 450px;
   display: inline-block;
@@ -231,27 +255,27 @@ section{
   transition: all 1s ease-in;
 }
 
-.home-moon{
+.home-moon {
   margin-top: -100px;
   margin-left: -75px;
 }
 
-.projects-moon{
+.projects-moon {
   margin-top: 0px;
-  margin-left: 0px;                                                                 
+  margin-left: 0px;
 }
 
-.about-moon{
+.about-moon {
   margin-top: 250px;
   margin-left: 40px;
 }
 
-.contact-moon{
+.contact-moon {
   margin-top: 600px;
   margin-left: 50px;
 }
 
-.moon-freya{
+.moon-freya {
   display: inline-block;
   transform-style: preserve-3d;
   border-radius: 50%;
@@ -263,43 +287,45 @@ section{
   z-index: 2;
 }
 
-  .moon-freya:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: inset -30px 10px 50px 15px rgba(0,0,0,0.5);
-    z-index: 3;
+.moon-freya:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset -30px 10px 50px 15px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+@keyframes move-moon-freya {
+  0% {
+    background-position: -900px 0;
   }
 
-  @keyframes move-moon-freya {
-    0%{
-      background-position: -900px 0;
-    }
-    100%{
-      background-position: 0 0;
-    }
+  100% {
+    background-position: 0 0;
   }
+}
 
 /****************************************
  * Media Queries
  ***************************************/
 
 @media all and (min-width: 768px) and (max-width: 1024px),
-only screen and (min-device-width: 768px) and (max-device-width: 1024px) and  (orientation: landscape){
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 
   html {
     font-size: 14px;
   }
+
   .container {
     width: 320px;
   }
 
 
-  .container .content span{
+  .container .content span {
     display: block;
     width: 190px;
     height: 5px;
@@ -319,49 +345,50 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and  (o
     flex-grow: 1;
   }
 
-  .moon-freya-perspective{
+  .moon-freya-perspective {
     width: 300px;
     height: 300px;
   }
 
-  .moon-freya{
+  .moon-freya {
     background: url('../images/freya-mobile.png') repeat-x;
   }
 
-    .moon-freya:before{
-      box-shadow: inset -20px 8px 40px 10px rgba(0,0,0,0.5);
+  .moon-freya:before {
+    box-shadow: inset -20px 8px 40px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  @keyframes move-moonfreya {
+    0% {
+      background-position: -600px 0;
     }
 
-    @keyframes move-moonfreya {
-      0%{
-        background-position: -600px 0;
-      }
-      100%{
-        background-position: 0 0;
-      }
+    100% {
+      background-position: 0 0;
     }
+  }
 
-  .home-moon{
+  .home-moon {
     margin-left: -75px;
     margin-top: -200px;
   }
 
-  .projects-moon{
+  .projects-moon {
     margin-left: 0px;
     margin-top: 0px;
   }
 
-  .about-moon{
+  .about-moon {
     margin-left: 40px;
     margin-top: 200px;
   }
 
-  .contact-moon{
+  .contact-moon {
     margin-left: 50px;
     margin-top: 400px;
   }
 
-  .moon-link{
+  .moon-link {
     font-size: 3em;
   }
 
@@ -369,18 +396,19 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and  (o
 
 
 
-@media all and (min-width: 580px) and (max-width: 768px), 
-only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (orientation: landscape){
+@media all and (min-width: 580px) and (max-width: 768px),
+only screen and (min-device-width: 580px) and (max-device-width: 768px) and (orientation: landscape) {
 
   html {
     font-size: 14px;
   }
+
   .container {
     min-width: 227px;
     flex-grow: 0;
   }
 
-  .container .content span{
+  .container .content span {
     display: block;
     width: 190px;
     height: 5px;
@@ -400,61 +428,63 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
     flex-grow: 0;
   }
 
-  .moon-freya-perspective{
+  .moon-freya-perspective {
     width: 150px;
     height: 150px;
   }
 
-  .moon-freya{
+  .moon-freya {
     background: url('../images/freya-mobile.png') repeat-x;
   }
 
-    .moon-freya:before{
-      box-shadow: inset -20px 8px 40px 10px rgba(0,0,0,0.5);
+  .moon-freya:before {
+    box-shadow: inset -20px 8px 40px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  @keyframes move-moonfreya {
+    0% {
+      background-position: -600px 0;
     }
 
-    @keyframes move-moonfreya {
-      0%{
-        background-position: -600px 0;
-      }
-      100%{
-        background-position: 0 0;
-      }
+    100% {
+      background-position: 0 0;
     }
-  .home-moon{
+  }
+
+  .home-moon {
     margin-top: -200px;
   }
 
-  .projects-moon{
+  .projects-moon {
     margin-top: 0px;
   }
 
-  .about-moon{
+  .about-moon {
     margin-top: 200px;
   }
 
-  .contact-moon{
+  .contact-moon {
     margin-top: 400px;
   }
 
-  .moon-link{
+  .moon-link {
     font-size: 3em;
   }
 }
 
 
 
-@media only screen and (max-device-width: 1400px) and (orientation: portrait){
+@media only screen and (max-device-width: 1400px) and (orientation: portrait) {
 
   html {
     font-size: 13px;
   }
 
-  section{
+  section {
     flex-direction: column-reverse;
   }
 
-  #moon-container{
+  #moon-container {
     flex-direction: column-reverse;
   }
 
@@ -467,11 +497,11 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
     justify-content: center;
   }
 
-  .container .content{
+  .container .content {
     width: auto;
   }
 
-  .container .content span{
+  .container .content span {
     display: block;
     width: 60%;
     height: 5px;
@@ -493,49 +523,50 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
     flex-grow: 0;
   }
 
-  .moon-freya-perspective{
+  .moon-freya-perspective {
     width: 150px;
     height: 150px;
   }
 
-  .moon-freya{
+  .moon-freya {
     background: url('../images/freya-150.png') repeat-x;
   }
 
-    .moon-freya:before{
-      box-shadow: inset -10px 5px 30px 5px rgba(0,0,0,0.5);
+  .moon-freya:before {
+    box-shadow: inset -10px 5px 30px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  @keyframes move-moonfreya {
+    0% {
+      background-position: -300px 0;
     }
 
-    @keyframes move-moonfreya {
-      0%{
-        background-position: -300px 0;
-      }
-      100%{
-        background-position: 0 0;
-      }
+    100% {
+      background-position: 0 0;
     }
+  }
 
-  .home-moon{
+  .home-moon {
     margin-top: -10px;
     margin-left: -200px;
   }
 
-  .projects-moon{
+  .projects-moon {
     margin-top: -5px;
     margin-left: -50px;
   }
 
-  .about-moon{
+  .about-moon {
     margin-top: 0px;
     margin-left: 100px;
   }
 
-  .contact-moon{
+  .contact-moon {
     margin-top: 20px;
     margin-left: 250px;
   }
 
-  .moon-link{
+  .moon-link {
     font-size: 2em;
   }
 
