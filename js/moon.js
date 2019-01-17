@@ -1,54 +1,57 @@
 console.log(`Moon Position Loader`);
-var moonlocation = document.getElementsByClassName(`moonfreya-perspective`);
-var moon = document.getElementsByClassName(`moonfreya`);
+var moonLocation = document.getElementsByClassName(`moon-freya-perspective`);
+var moon = document.getElementsByClassName(`moon-freya`);
 
 const checkmoon = () => {
 	let currentAnchor = getAnchor();
 	let newclass;
 	switch (currentAnchor){
 		case `home`:
-			newclass=`homemoon`;
-			removeClass1=`projectsmoon`;
-			removeClass2=`aboutmoon`;
-			removeClass3=`contactmoon`;
+			newclass=`home-moon`;
+			removeClass1=`projects-moon`;
+			removeClass2=`about-moon`;
+			removeClass3=`contact-moon`;
 			break;
 		case `projects`:
-			newclass=`projectsmoon`;
-			removeClass1=`homemoon`;
-			removeClass2=`aboutmoon`;
-			removeClass3=`contactmoon`;
+			newclass=`projects-moon`;
+			removeClass1=`home-moon`;
+			removeClass2=`about-moon`;
+			removeClass3=`contact-moon`;
 			break;
 		case `about`:
-			newclass=`aboutmoon`;
-			removeClass1=`homemoon`;
-			removeClass2=`projectsmoon`;
-			removeClass3=`contactmoon`;
+			newclass=`about-moon`;
+			removeClass1=`home-moon`;
+			removeClass2=`projects-moon`;
+			removeClass3=`contact-moon`;
 			break;
 		case `contact`:
-			newclass=`contactmoon`;
-			removeClass1=`homemoon`;
-			removeClass2=`projectsmoon`;
-			removeClass3=`aboutmoon`;
+			newclass=`contact-moon`;
+			removeClass1=`home-moon`;
+			removeClass2=`projects-moon`;
+			removeClass3=`about-moon`;
 			break;
 	}
 	console.log(newclass);
-	for (var i = 0; i < moonlocation.length; i++) {
+	for (var i = 0; i < moonLocation.length; i++) {
 		console.log(`innerHTML: ${moon[i].innerHTML}`);
-		moonlocation[i].classList.remove(removeClass1);
-		moonlocation[i].classList.remove(removeClass2);
-		moonlocation[i].classList.remove(removeClass3);
-    	moonlocation[i].classList.add(newclass);
+		moonLocation[i].classList.remove(removeClass1);
+		moonLocation[i].classList.remove(removeClass2);
+		moonLocation[i].classList.remove(removeClass3);
+    	moonLocation[i].classList.add(newclass);
   		changeMoonInnerHTML(moon[i], newclass);
     }
 }
 
 const changeMoonInnerHTML = (moons, newclass) => {
 	switch (newclass) {
-		case `contactmoon`:
-			moons.innerHTML=`<div class='moonoverlay'></div>`;
+		case `contact-moon`:
+			moons.innerHTML=`<div class='moon-overlay'></div>`;
 			break;
-		case `projectsmoon`:
-			moons.innerHTML=`<a href='projects.html' class='moonlink moonlinkprojects'>Show more</a>`;
+		case `projects-moon`:
+			moons.innerHTML=`<a href='projects.html' class='moon-link moon-link-projects'>Show more</a>`;
+			break;
+		case `about-moon`:
+			moons.innerHTML=`<a href='aboutme.html' class='moon-link moon-link-about'>Show more</a>`;
 			break;
 		default:
 			moons.innerHTML=``;

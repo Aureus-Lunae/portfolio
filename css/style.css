@@ -35,8 +35,13 @@ body {
   display: block;
 }
 
-#projectcontainer .twinkling{
+#project-container .twinkling{
   background: transparent url(../images/twinklingprojects.png) repeat top center;
+  animation: twinkling-stars 200s linear infinite;
+}
+
+#aboutme-container .twinkling{
+  background: transparent url(../images/twinklingabout.png) repeat top center;
   animation: twinkling-stars 200s linear infinite;
 }
 
@@ -48,16 +53,26 @@ body {
     background-position: -10000px 5000px;
   }
 }
+
 /**********************
  * Projectscontainer
  *********************/
  
- #projectcontainer{
+ #project-container{
  	padding: 2em;
  	position: fixed;
    	width: 100%;
    	min-height: 100%;
   	background: #181824 url(../images/stars2.png) repeat top center;
+  	z-index: -1;
+ }
+
+ #aboutme-container{
+ 	padding: 2em;
+ 	position: fixed;
+   	width: 100%;
+   	min-height: 100%;
+  	background: #27273c url(../images/stars.png) repeat top center;
   	z-index: -1;
  }
 
@@ -90,30 +105,46 @@ body {
     grid-column-end: span 3;
 }
 
-
-
- .project{
+.project{
  	margin: 1em;
  	display: flex;
  	flex-direction: column;
  	justify-content: center;
  	align-items: center;
  	z-index: 1;
- }
+}
 
- .projecttext{
+.project-text{
  	font-size: 3em;
  	color: #fff;
  	text-align: center;
- }
+}
 
- .projectsubtext{
+.project-subtext{
  	font-size: 1.5em;
  	color: #fff;
  	margin-bottom: 20px;
  	text-align: center;
- }
+}
 
+.about{
+ 	margin: 1em;
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
+ 	align-items: center;
+ 	z-index: 1;
+}
+
+.about-title{
+	font-size: 3em;
+	color: #fff;
+}
+
+.about-subtitle{
+	font-size: 1.5em;
+	color: #fff;
+}
 
 /** 
  * Media Queries
@@ -134,9 +165,9 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px){
 @media all and (min-width: 350px) and (max-width: 768px), 
 only screen and (min-device-width: 350px) and (max-device-width: 768px){
 
-  html {
-    font-size: 13px;
-  }
+	html {
+	    font-size: 13px;
+	}
 
 	.colspan-2 {
 		grid-column-end: span 1;

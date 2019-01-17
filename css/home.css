@@ -18,16 +18,15 @@ body {
   color: #fff;
 }
 
-
 .debug {
   border: 1px solid #ffdd40;
 }
 
-
 /************************************
  * Section overlay
  *************************************/
-#mooncontainer{
+
+#moon-container{
   top: 0;
   left: 0;
   height: 100%;
@@ -37,7 +36,6 @@ body {
   justify-content: flex-start;
   z-index: 1;
 }
-
 
 /************************************
  * Section parts that gets used in all sections
@@ -78,11 +76,11 @@ section{
   margin-left: 110px;
 }
 
-.golddark {
+.gold-dark {
   background: #a67c00;
 }
 
-.goldlight {
+.gold-light {
   background: #bf9b30;
 }
 
@@ -108,6 +106,7 @@ section{
 /**
  * Page Sections
  */
+
 #home{
   height: 100vh;
   width: 100%;
@@ -146,6 +145,7 @@ section{
   height: 100%;
   display: block;
 }
+
 #home .twinkling{
   top: 0;
   background: transparent url(../images/twinklinghome.png) repeat top center;
@@ -183,7 +183,7 @@ section{
  * Moons
  */
 
-.moonoverlay{
+.moon-overlay{
   position: absolute;
   content: "";
   top: 0;
@@ -196,7 +196,7 @@ section{
   z-index: 5;
 }
 
-.moonlink{
+.moon-link{
   position: absolute;
   content: "";
   top: 0;
@@ -214,12 +214,15 @@ section{
   font-weight: 700;
 }
 
-.moonlinkprojects{
+.moon-link-projects{
   color: #181824;
 }
 
+.moon-link-about{
+  color: #27273c;
+}
 
-.moonfreya-perspective{
+.moon-freya-perspective{
   width: 450px;
   height: 450px;
   display: inline-block;
@@ -228,28 +231,27 @@ section{
   transition: all 1s ease-in;
 }
 
-.homemoon{
+.home-moon{
   margin-top: -100px;
   margin-left: -75px;
 }
 
-.projectsmoon{
+.projects-moon{
   margin-top: 0px;
   margin-left: 0px;                                                                 
 }
 
-.aboutmoon{
+.about-moon{
   margin-top: 250px;
   margin-left: 40px;
 }
 
-.contactmoon{
+.contact-moon{
   margin-top: 600px;
   margin-left: 50px;
 }
 
-
-.moonfreya{
+.moon-freya{
   display: inline-block;
   transform-style: preserve-3d;
   border-radius: 50%;
@@ -257,11 +259,11 @@ section{
   width: 100%;
   position: relative;
   background: url('../images/freya.png') repeat-x;
-  animation: move-moonfreya 90s infinite linear;
+  animation: move-moon-freya 90s infinite linear;
   z-index: 2;
 }
 
-  .moonfreya:before{
+  .moon-freya:before{
     content: '';
     position: absolute;
     top: 0;
@@ -273,7 +275,7 @@ section{
     z-index: 3;
   }
 
-  @keyframes move-moonfreya {
+  @keyframes move-moon-freya {
     0%{
       background-position: -900px 0;
     }
@@ -282,18 +284,9 @@ section{
     }
   }
 
-
-
-
-
-
-
-
-
 /****************************************
  * Media Queries
  ***************************************/
-
 
 @media all and (min-width: 768px) and (max-width: 1024px),
 only screen and (min-device-width: 768px) and (max-device-width: 1024px) and  (orientation: landscape){
@@ -326,16 +319,16 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and  (o
     flex-grow: 1;
   }
 
-  .moonfreya-perspective{
+  .moon-freya-perspective{
     width: 300px;
     height: 300px;
   }
 
-  .moonfreya{
+  .moon-freya{
     background: url('../images/freya-mobile.png') repeat-x;
   }
 
-    .moonfreya:before{
+    .moon-freya:before{
       box-shadow: inset -20px 8px 40px 10px rgba(0,0,0,0.5);
     }
 
@@ -348,31 +341,34 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and  (o
       }
     }
 
-  .homemoon{
+  .home-moon{
     margin-left: -75px;
     margin-top: -200px;
   }
 
-  .projectsmoon{
+  .projects-moon{
     margin-left: 0px;
     margin-top: 0px;
   }
 
-  .aboutmoon{
+  .about-moon{
     margin-left: 40px;
     margin-top: 200px;
   }
 
-  .contactmoon{
+  .contact-moon{
     margin-left: 50px;
     margin-top: 400px;
   }
 
-  .moonlink{
+  .moon-link{
     font-size: 3em;
   }
 
 }
+
+
+
 @media all and (min-width: 580px) and (max-width: 768px), 
 only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (orientation: landscape){
 
@@ -404,16 +400,16 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
     flex-grow: 0;
   }
 
-  .moonfreya-perspective{
+  .moon-freya-perspective{
     width: 150px;
     height: 150px;
   }
 
-  .moonfreya{
+  .moon-freya{
     background: url('../images/freya-mobile.png') repeat-x;
   }
 
-    .moonfreya:before{
+    .moon-freya:before{
       box-shadow: inset -20px 8px 40px 10px rgba(0,0,0,0.5);
     }
 
@@ -425,23 +421,23 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
         background-position: 0 0;
       }
     }
-  .homemoon{
+  .home-moon{
     margin-top: -200px;
   }
 
-  .projectsmoon{
+  .projects-moon{
     margin-top: 0px;
   }
 
-  .aboutmoon{
+  .about-moon{
     margin-top: 200px;
   }
 
-  .contactmoon{
+  .contact-moon{
     margin-top: 400px;
   }
 
-  .moonlink{
+  .moon-link{
     font-size: 3em;
   }
 }
@@ -458,7 +454,7 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
     flex-direction: column-reverse;
   }
 
-  #mooncontainer{
+  #moon-container{
     flex-direction: column-reverse;
   }
 
@@ -497,16 +493,16 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
     flex-grow: 0;
   }
 
-  .moonfreya-perspective{
+  .moon-freya-perspective{
     width: 150px;
     height: 150px;
   }
 
-  .moonfreya{
+  .moon-freya{
     background: url('../images/freya-150.png') repeat-x;
   }
 
-    .moonfreya:before{
+    .moon-freya:before{
       box-shadow: inset -10px 5px 30px 5px rgba(0,0,0,0.5);
     }
 
@@ -519,27 +515,27 @@ only screen and (min-device-width: 580px) and (max-device-width: 768px) and  (or
       }
     }
 
-  .homemoon{
+  .home-moon{
     margin-top: -10px;
     margin-left: -200px;
   }
 
-  .projectsmoon{
+  .projects-moon{
     margin-top: -5px;
     margin-left: -50px;
   }
 
-  .aboutmoon{
+  .about-moon{
     margin-top: 0px;
     margin-left: 100px;
   }
 
-  .contactmoon{
+  .contact-moon{
     margin-top: 20px;
     margin-left: 250px;
   }
 
-  .moonlink{
+  .moon-link{
     font-size: 2em;
   }
 

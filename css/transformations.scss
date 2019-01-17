@@ -9,7 +9,7 @@ $rotate: ("0deg", "45deg", "-45deg", "90deg", "-90deg");
 @each $scaling, $i in $scale {
 	@each $toptrans, $j in $top {
 		@each $lefttrans, $k in $left{
-      @each $rotating, $l in $rotate{
+      @each $rotating in $rotate{
         .trans-s#{$scaling}-#{$toptrans}-#{$lefttrans}-#{$rotating} {
           transform: scale3d(#{$i}, #{$i}, #{$i}) translate(#{$k}px, #{$j}px) rotate(#{$rotating});
         }

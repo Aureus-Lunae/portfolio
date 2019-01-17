@@ -88,7 +88,7 @@ const getPageAnchorAmount = () => {
  * When scrolling up, you go to the previous page; when scrolling down, to the next.
  * @param  {[int]} scroll [Negative is scrolling up, positive is scrolling down.]
  */
-const Scrollwheel = (scroll) => {
+const scrollWheel = (scroll) => {
 	console.log(`scroll ${scroll.deltaY}`);
 	if (isScrollPossible===true){
 		isScrollPossible = false;
@@ -101,11 +101,11 @@ const Scrollwheel = (scroll) => {
 }
 
 /**
- * keypress event
+ * keyPress event
  * Go to the next page when the downkey is pressed, and go to the previous page when up is pressed,
  * @param  {[string]} event
  */
-const keypress = (event) => {
+const keyPress = (event) => {
 	let keyAnchor = getAnchor();
 	if (isScrollPossible === true) {
 		isScrollPossible = false;
@@ -203,11 +203,11 @@ const resetScrollPossible = () => {
 }
 
 /**
- * Document event handlers for mousewheel for different browsers, and document event handlers for keypresses.
+ * Document event handlers for mousewheel for different browsers, and document event handlers for keyPresses.
  */
-document.addEventListener(`mousewheel`, Scrollwheel);
-document.addEventListener(`DOMMouseScroll`, Scrollwheel);
-document.addEventListener(`keydown`, keypress);
+document.addEventListener(`mousewheel`, scrollWheel);
+document.addEventListener(`DOMMouseScroll`, scrollWheel);
+document.addEventListener(`keydown`, keyPress);
 
 /**
  * Navigation Changer (Requires some functions of scroll.js)
