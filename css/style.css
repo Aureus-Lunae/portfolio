@@ -153,6 +153,38 @@ body {
 	text-align: justify;
 }
 
+.extra {
+	display: none;
+}
+
+.extra-title {
+	font-size: 1.8em;
+	text-align: center;
+	color: #a67c00;
+}
+
+.extra p {
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+
+.hide {
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+}
+
+.hide:hover .extra {
+	display: inline-block;
+	position: absolute;
+	color: #a67c00;
+	text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+	transform: translate(-50px, 50px);
+	text-align: center;
+	border-radius: 20px;
+}
+
 /** 
  * Media Queries
  */
