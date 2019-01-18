@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-#leftmenu ul{
+#leftmenu ul {
   list-style-type: none;
 }
 
@@ -46,17 +46,17 @@
   border-left: #bf9b30 10px solid;
 }
 
-@media only screen and (max-device-width: 1400px) and (orientation: portrait){
+@media only screen and (max-device-width: 1400px) and (orientation: portrait) {
 
   #leftmenu {
     top: auto;
-    width: 100%;
+    width: 50%;
     height: 64px;
     top: 0;
     justify-content: flex-start;
   }
 
-  #leftmenu li{
+  #leftmenu li {
     display: inline-block;
   }
 
@@ -68,8 +68,8 @@
   }
 
   .active {
-  background-color: #a67c00;
-  border-left: #bf9b30 10px solid;
+    background-color: #a67c00;
+    border-left: #bf9b30 10px solid;
   }
 
 }

@@ -32,11 +32,11 @@
 .socialmedia {
   display: flex;
   align-items: flex-end;
-  z-index: 999;
+  z-index: 5;
 }
 
 .socialmedia a {
-  margin: 0 10px;
+  margin: 0 8px;
 }
 
 /**
@@ -44,12 +44,13 @@
  */
 
 #menuburger {
-  margin-left: 50px;
+  margin-left: 30px;
   position: relative;
   display: block;
 }
 
 #menuburger input {
+  margin-top: 5px;
   display: block;
   width: 40px;
   height: 32px;
@@ -67,12 +68,12 @@
   position: relative;
   border-radius: 3px;
   z-index: 1;
-  margin-bottom: 5px;
+  margin-top: 5px;
 
   transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
 }
 
 #menuburger span:first-child {
@@ -83,18 +84,18 @@
   transform-origin: 0% 100%;
 }
 
-#menuburger input:checked ~ span {
+#menuburger input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, 1px);
   background: #a67c00;
 }
 
-#menuburger input:checked ~span:nth-last-child(3) {
+#menuburger input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate: 0deg scale(0.2, 0.2);
 }
 
-#menuburger input:checked ~ span:nth-last-child(2) {
+#menuburger input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -104,13 +105,13 @@
   width: 250px;
   margin: -2em 0 0 -7em;
   padding: 2em 0 0 0;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
 
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
 #menu li {
@@ -119,6 +120,6 @@
 }
 
 
-#menuburger input:checked ~ ul {
+#menuburger input:checked~ul {
   transform: none;
 }
