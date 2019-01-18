@@ -14,6 +14,7 @@
 	<link href="css/transformations.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/mobiletransforms.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/sidemenu.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/fadeout.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,400i,700,700i"
 	 rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,6 +22,7 @@
 
 <body>
 	<svg class='load-page-about'></svg>
+	<svg class='load-page'></svg>
 	<header id='header'>
 		<div></div>
 		<div class='navigation'>
@@ -36,11 +38,10 @@
 				<span></span>
 				<span></span>
 				<ul id='menu'>
-					<li><a href='index.php'>Home</a></li>
-					<li><a href='projects.html'>Projects</a></li>
-					<li><a href='aboutme.html'>About</a></li>
-					<li><a href='index.php#contact'>Contact</a></li>
-				</ul>
+					<li><a onclick="moveToPage('index.php', 'home')">Home</a></li>
+					<li><a onclick="moveToPage('projects.html', 'projects')">Projects</a></li>
+					<li><a onclick="moveToPage('aboutme.html', 'about')">About</a></li>
+					<li><a onclick="moveToPage('index.php#contact', 'home')">Contact</a></li>
 			</div>
 		</div>
 	</header>
@@ -153,13 +154,13 @@
 
 	<div id='leftmenu'>
 		<ul>
-			<li><a href='index.php' class='leftnav home'></a></li>
-			<li><a href='index.php#projects' class='leftnav projects'></a></li>
-			<li><a href='index.php#about' class='leftnav about active'></a></li>
-			<li><a href='index.php#contact' class='leftnav contact'></a></li>
+			<li><a onclick="moveToPage('index.php', 'home')" class='leftnav home'></a></li>
+			<li><a onclick="moveToPage('index.php#projects', 'home')" class='leftnav projects active'></a></li>
+			<li><a onclick="moveToPage('index.php#about', 'home')" class='leftnav about'></a></li>
+			<li><a onclick="moveToPage('index.php#contact', 'home')" class='leftnav contact'></a></li>
 		</ul>
 	</div>
-
+	<script src='js/pageanimations.js'></script>
 </body>
 
 </html>

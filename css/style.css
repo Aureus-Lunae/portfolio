@@ -17,6 +17,12 @@ body {
 	color: #fff;
 }
 
+a {
+	text-decoration: 0;
+	cursor: pointer;
+}
+
+
 .load-page-projects {
 	background: #181824;
 	z-index: 9999;
@@ -24,7 +30,16 @@ body {
 	height: 100%;
 	width: 100%;
 	position: fixed;
-	animation: page-fade-in 3s ease-in-out;
+	animation: page-fade-in 2s ease-in-out;
+	opacity: 0;
+}
+
+.load-page {
+	z-index: 9999;
+	pointer-events: none;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
 	opacity: 0;
 }
 
@@ -35,10 +50,9 @@ body {
 	height: 100%;
 	width: 100%;
 	position: fixed;
-	animation: page-fade-in 3s ease-in-out;
+	animation: page-fade-in 2s ease-in-out;
 	opacity: 0;
 }
-
 
 @keyframes page-fade-in {
 	0% {
@@ -279,5 +293,9 @@ only screen and (min-device-width: 350px) and (max-device-width: 768px) {
 
 	.mobile-only {
 		display: inline-block;
+	}
+
+	.hide:hover .extra {
+		display: none;
 	}
 }

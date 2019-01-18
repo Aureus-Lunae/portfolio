@@ -11,6 +11,7 @@
 	<link href="css/home.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/header.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/sidemenu.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/fadeout.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,400i,700,700i"
 	 rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -36,8 +37,8 @@
 				<span></span>
 				<ul id='menu'>
 					<li><a onclick="navlinks('home')" href='#home'>Home</a></li>
-					<li><a href='projects.html'>Projects</a></li>
-					<li><a href='aboutme.html'>About</a></li>
+					<li><a onclick="moveToPage('projects.html', 'projects')">Projects</a></li>
+					<li><a onclick="moveToPage('aboutme.html', 'about')">About</a></li>
 					<li><a onclick="navlinks('contact')" href='#contact'>Contact</a></li>
 				</ul>
 			</div>
@@ -148,6 +149,7 @@
 
 
 	<script src='js/pagechanger.js'></script>
+	<script src='js/pageanimations.js'></script>
 	<script src='js/scroll.js'></script>
 	<script src='js/moon.js'></script>
 
