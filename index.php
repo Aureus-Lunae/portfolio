@@ -54,8 +54,8 @@
 			<div class='content'>
 				<div class='titles'>Erwin<br /> Korsten
 				</div>
-				<span class='golddark'></span>
-				<span class='golddark'></span>
+				<span class='gold-dark'></span>
+				<span class='gold-dark'></span>
 				<div class='subtitle'>
 					Junior<br />
 					Web Developer
